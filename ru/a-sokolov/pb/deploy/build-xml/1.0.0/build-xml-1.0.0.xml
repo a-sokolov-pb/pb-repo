@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project name="pb-project-build" basedir="." default="info">
-    <!-- Attention! This is a template build.xml file (see https://stash.delta.sbrf.ru/projects/ASCC/repos/ascc-pb-deployment) -->
     <target name="info">
-        <echo>This is a template build.xml file (see https://stash.delta.sbrf.ru/projects/ASCC/repos/ascc-pb-deployment)</echo>
+        <echo>This is a template build.xml file</echo>
     </target>
     
     <!-- Ссылка на nexus, где лежат все наши зависимости -->
-    <property name="nexus.url" value="https://github.com/a-sokolov-pb/pb-repo/tree/master/" />
+    <property name="nexus.url" value="https://github.com/a-sokolov-pb/pb-repo/blob/master/" />
     <!-- Файл PowerGen полной сборки приложения с тестами -->
     <property name="powergen.test.file" value="build.test.gen" />
     <!-- Файл PowerGen релизной сборки приложения, без тестов -->
@@ -28,15 +27,15 @@
     <!-- Итоговый файлы, только ошибок, работы PowerGen'а -->
     <property name="powergen.output.log.file" value="powergen.output.log" />
     <!-- PBDeployment API properties -->
-    <property name="deploy-api.version" value="9.0.9" />
+    <property name="deploy-api.version" value="1.0.0" />
     <property name="deploy-api.dir" location="${temp.dir}/pb-deploy-${deploy-api.version}" />
     <property name="deploy-api.exe" value="${deploy-api.dir}/pb_deploy.exe" />
-    <property name="deploy-api.url" value="ru/sbrf/ascc/pb/deploy/pb-deploy-zip/${deploy-api.version}/pb-deploy-zip-${deploy-api.version}.zip" />
+    <property name="deploy-api.url" value="ru/a-sokolov/pb/deploy/pb-deploy-zip/${deploy-api.version}/pb-deploy-zip-${deploy-api.version}.zip?raw=true" />
     <!-- PBUnitTest properties -->
-    <property name="unit-test.version" value="9.0.2" />
+    <property name="unit-test.version" value="1.0.0" />
     <property name="unit-test.dir" location="${temp.dir}/pb-unit-test-${unit-test.version}" />
     <property name="unit-test.exe" value="${unit-test.dir}/pb_unit_test.exe" />
-    <property name="unit-test.url" value="ru/sbrf/ascc/pb/unit-test/pb-unit-test-zip/${unit-test.version}/pb-unit-test-zip-${unit-test.version}.zip" />
+    <property name="unit-test.url" value="ru/a-sokolov/pb/unit-test/pb-unit-test-zip/${unit-test.version}/pb-unit-test-zip-${unit-test.version}.zip?raw=true" />
     
     <!-- Environment -->
     <property environment="env" />
